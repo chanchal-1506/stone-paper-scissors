@@ -48,6 +48,16 @@ img{
     margin-top: 3rem;
     gap: 5rem;
 }
+.comp{
+    margin: 2rem;
+}
+#comp-move{
+    font-size: 2rem;
+    color: blue;
+}
+.comp p{
+  font-size: 1.5rem;
+}
 
 #user-score,
 #comp-score{

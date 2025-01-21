@@ -3,9 +3,9 @@ let compScore = 0;
 
 const choices = document.querySelectorAll(".choice");
 const msg = document.querySelector("#msg");
-
 const userScorePara = document.querySelector("#user-score");
 const compScorePara = document.querySelector("#comp-score");
+const compMovePara = document.querySelector("#comp-move"); // Element to display computer's move
 
 const genCompChoice = () => {
   const options = ["rock", "paper", "scissors"];
@@ -33,22 +33,25 @@ const showWinner = (userWin, userChoice, compChoice) => {
 };
 
 const playGame = (userChoice) => {
-  //Generate computer choice
+  // Generate computer choice
   const compChoice = genCompChoice();
 
+  // Display the computer's move
+  compMovePara.innerText = compChoice;
+
   if (userChoice === compChoice) {
-    //Draw Game
+    // Draw Game
     drawGame();
   } else {
     let userWin = true;
     if (userChoice === "rock") {
-      //scissors, paper
+      // scissors, paper
       userWin = compChoice === "paper" ? false : true;
     } else if (userChoice === "paper") {
-      //rock, scissors
+      // rock, scissors
       userWin = compChoice === "scissors" ? false : true;
     } else {
-      //rock, paper
+      // rock, paper
       userWin = compChoice === "rock" ? false : true;
     }
     showWinner(userWin, userChoice, compChoice);
