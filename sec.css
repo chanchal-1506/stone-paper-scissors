@@ -65,6 +65,7 @@ img{
 }
 
 .msg-container{
+    height: 6rem;
     margin-top: 5rem;
 }
 
@@ -135,11 +136,62 @@ img{
     #msg{
         background-color: #081b31;
         color: #ffff;
-        font-size: 1.3rem;
+        font-size: 1.5rem;
         display: inline;
         padding: 1rem;
         border-radius: 1rem;
+        
     
     }
     
+}
+
+@media (max-width:370px){
+    h1{
+        width: 100%;
+        background-color:#081b31;
+        color: #ffff;
+        height: 5rem;
+        line-height: 5rem;
+    }
+    
+    .choice{
+        height: 90px;
+        width: 90px;
+    }
+    
+    img{
+        height: 80px;
+        width: 80px;
+    }
+    
+    .choices{
+        margin-top: 4rem;
+    
+    }
+    .score-board{
+        font-size: 1.5rem;
+        margin-top: 3rem;
+        gap: 5rem;
+    }
+    
+    #user-score,
+    #comp-score{
+        font-size: 1.5rem;
+    }
+    
+    .msg-container{
+        margin-top: 4rem;
+    }
+    
+    #msg{
+        font-size: 1rem;
+    }
+    #comp-move{
+        font-size: 1.5rem;
+        color: blue;
+    }
+    .comp p{
+      font-size: 1.2rem;
+    }
 }
